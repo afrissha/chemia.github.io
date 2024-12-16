@@ -1,0 +1,261 @@
+/* Paleta kolorów */
+:root {
+    --background-dark: #121212;
+    --primary: #64ffda;
+    --secondary: #ff6f61;
+    --card-bg: #1e1e1e;
+    --text-light: #e0e0e0;
+    --highlight: #fbc02d;
+    --btn-gradient: linear-gradient(45deg, #64ffda, #ff6f61);
+}
+
+/* Globalny styl */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    padding: 0;
+    overflow-y: scroll;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Добавлено для всей страницы */
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(45deg, #64ffda, #ff6f61);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: var(--background-dark);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Добавлено для улучшения читаемости */
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Добавлено для улучшения читаемости */
+}
+
+/* Slajdy */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.slide {
+    margin-bottom: 70px;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.slide:hover {
+    transform: scale(1.02);
+}
+
+.slide h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.slide p {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+/* Убираем тень и центрируем изображение */
+.slide img {
+    max-width: 100%;
+    max-height: 500px;
+
+    border-radius: 15px;
+    margin: 0 auto; /* Центрирование изображения горизонтально */
+    box-shadow: none; /* Убираем тень с изображения */
+    display: block; /* Убедимся, что это блочный элемент */
+}
+
+/* Tabela właściwości elektrolitów */
+.properties-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.properties-table th, .properties-table td {
+    padding: 15px;
+    border: 1px solid var(--primary);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.properties-table th {
+    background-color: var(--primary);
+    color: var(--background-dark);
+}
+
+.properties-table td {
+    background-color: var(--card-bg);
+    color: var(--text-light);
+}
+
+/* Przyciski */
+button {
+    cursor: pointer;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Добавлено для кнопок */
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.info-btn {
+    background: var(--btn-gradient);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Улучшение читаемости текста на градиенте */
+}
+
+.info-btn:hover {
+    background: var(--secondary);
+}
+
+/* Стили кнопок */
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white; /* Основной цвет текста */
+    background: linear-gradient(90deg, orange, lightblue); /* Градиент */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Тень текста для контраста */
+}
+
+.button:hover {
+    filter: brightness(1.1); /* Легкое осветление при наведении */
+}
+
+.button:active {
+    transform: scale(0.95); /* Эффект нажатия */
+}
+
+/* Ukrywanie tekstu */
+.hidden {
+    display: none;
+}
+
+/* Обrazy */
+.media img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1px;
+    color: var(--background-dark);
+}
+
+/* Styl dla przycisku źródła */
+.source-btn {
+		display: flex; /* Используем flexbox */
+    justify-content: center !important ; /* Центрируем по горизонтали */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+   color: white;
+    background: linear-gradient(90deg, #64ffda, #ff6f61); /* Градиент */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Тень текста для лучшей читаемости */
+}
+
+.source-btn:hover {
+    filter: brightness(1.1); /* Осветление при наведении */
+}
+
+.source-btn:active {
+    transform: scale(0.95); /* Эффект нажатия */
+}
+
+/* Styl dla listy źródeł */
+.source-list {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.source-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.source-list li {
+    margin: 10px 0;
+}
+
+.source-list a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.source-list a:hover {
+    text-decoration: underline;
+}
+
+
+/* Podwójny kontener */
+.double-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 70px;
+}
+
+.double-container .box {
+    flex: 1;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.double-container .box:hover {
+    transform: scale(1.02);
+}
+
+.double-container .box h3 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.double-container .box p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    line-height: 1.4;
+}
